@@ -1,0 +1,21 @@
+
+.div_block {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.div_block label {
+    font-weight: 500;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.div_block input {
+    outline: none;
+    width: 290px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+}

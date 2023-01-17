@@ -1,0 +1,25 @@
+.expenses-filter{
+    color: white;
+    padding: 0;
+    margin-top: 20px ;
+    margin-bottom: 1rem;
+    }
+    
+    .expenses-filter__control{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .select{
+        width: 124px;
+        height: 43px;
+    border-radius: 5px;
+    text-align: center;
+    }
+
+    .label {
+        font-family: 'inter';
+        font-size: 16px;
+    }

@@ -1,0 +1,14 @@
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .button_div {
+    margin-top: 2rem;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    margin-left: 120px;
+  }

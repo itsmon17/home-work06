@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Expenses from "./components/expenses/Expenses";
 import NewExpense from "./components/new-expense/NewExpense";
+import styles from "./components/chart/Chart.module.css"
 
 const items = [
   {
@@ -98,9 +99,9 @@ function App() {
    const upExpenses = [...expenses];
    upExpenses.push(data)
    setExpenses(upExpenses)
-   }
+   }                                    
 
-  return <div className="apps"> 
+  return <div className="apps">   
     <div className="items">
     <NewExpense onNewExpenseAdd={addNewExpenseHandler}/>
     <Expenses expenses={expenses}/>

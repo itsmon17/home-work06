@@ -3,6 +3,9 @@ import ExpenseItem from "../../UI/expense-item/ExpenseItem";
 import ExpensesFilter from "../expenses-filter/ExpensesFilter";
 import "./Expenses.css";
 import Chart from "../chart/Chart";
+
+
+
 const Expenses = ({ expenses }) => {
   const [selectedYear, setSelectedYear] = useState("2023");
   const yearChangeHandler = (event) => {
@@ -15,7 +18,9 @@ const Expenses = ({ expenses }) => {
   return (
       <ul className="ul-list">
       <ExpensesFilter value={selectedYear} onChange={yearChangeHandler} />
-      <Chart items={filteredItems}/>
+      <Chart items={filteredItems} theme="violet" />
+      <Chart items={filteredItems} theme="green" />
+      <Chart items={filteredItems} theme="red" />
         {filteredItems.map((elem) => {
           return (
             <ExpenseItem

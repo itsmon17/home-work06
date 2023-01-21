@@ -1,9 +1,9 @@
 import React from "react";
 import "./ChartBar.css"
 const ChartBar = ({ maximumPrice, currentPrice, label }) => {
-  const fillHeigt = (100 * currentPrice) / maximumPrice;
+  const fillHeigt = (100 * currentPrice) / maximumPrice; //"chart-bar"
   return (
-    <div className="chart-bar">
+    <div className="chart-bar">                                  
       <div className="chart-bar__inner">
         <div
           className="chart-bar__fill"

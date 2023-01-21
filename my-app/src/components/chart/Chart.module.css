@@ -8,3 +8,15 @@
     justify-content: space-around;
     height: 10rem;
 }
+
+.chartViolet {
+    background-color: blueviolet;
+}
+
+.chartGreen {
+    background-color:violet;
+}
+
+.chartRed {
+    background-color: red;
+}

@@ -1,7 +1,10 @@
 import React from "react";
 import ChartBar from "./ChartBar";
-import "./Chart.css"
-const Chart = ({items}) => {
+import classes from "./Chart.module.css";
+
+import styled from "styled-components";
+
+const Chart = ({ items, theme }) => {
   const maximumPrice = 2000;
   const month = [
     {
@@ -53,12 +56,21 @@ const Chart = ({items}) => {
       currentPrice: 0,
     },
   ];
-   items.forEach((item) => {
+  items.forEach((item) => {
     const mothNumber = new Date(item.date).getMonth();
-    month[mothNumber].currentPrice += item.price
+    month[mothNumber].currentPrice += item.price;
   });
+
+  // const getContainerClassName = () => {
+  //   return `${classes.chart} ${
+  //     theme === "violet" ? classes.chartViolet : classes.chartGreen
+  //   }`;
+  // };
+
   return (
-    <div className="chart">
+    <Container theme={theme}  >
+      <StyledButton color="green">text</StyledButton>
+      <StyledButton color="red">text</StyledButton>
       {month.map((item) => {
         return (
           <ChartBar
@@ -69,8 +81,37 @@ const Chart = ({items}) => {
           />
         );
       })}
-    </div>
+    </Container>
   );
 };
 
+const getTheme = (props) => {
+  let theme = "violet"
+  if(props.theme === "green"){
+    theme = "green"
+  }
+
+  if(props.theme === "red"){
+    theme = "red"
+  }
+  return theme
+};
+
+const StyledButton = styled.button `
+  background-color: ${(props) => props.color};
+
+`
+
 export default Chart;
+
+const Container = styled.div`
+  margin-top: 90px;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #f8dfff;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  height: 10rem;
+  background-color: ${getTheme};
+`;
